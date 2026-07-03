@@ -144,4 +144,33 @@ A style guide cannot anticipate every framework or production decision. Excessiv
 Evidence:
 
 * Engineering style guide: `docs/engineering-style-guide.md`
-* Pull request: #___
+* Pull request: #4
+
+### React and TypeScript Frontend Foundation
+
+The frontend uses React and TypeScript with Vite to provide a maintainable, statically checked foundation for the public production platform.
+
+**Implementation:**
+
+* Created the frontend in `frontend/` using React, TypeScript, and Vite.
+* Used npm for dependency management and committed `package-lock.json` so dependency versions can be reproduced from a clean checkout.
+* Added documented commands for local development, linting, and production builds.
+* Configured the project so Vite transforms the React source into prebuilt, browser-ready static files in `frontend/dist/`.
+* Replaced the generated starter page with the initial public-facing production-platform content.
+
+**Why it matters:**
+
+React provides a component model suitable for the interactive portfolio interface, while TypeScript catches many interface and data-shape errors before they reach the browser. The npm and Vite toolchain also creates a repeatable path from source code to deployable static files that can later be verified through continuous integration and hosted through Cloudflare Pages.
+
+**Tradeoffs / limitations:**
+
+React and TypeScript introduce build tooling and dependency-management overhead compared with a small hand-written HTML page. The current frontend is intentionally minimal and does not yet justify additional frameworks for routing, state management, or server-side rendering. Those capabilities will be introduced only when the application requirements make them useful.
+
+**Evidence / verification:**
+
+* Frontend source: `frontend/`
+* Local development: `npm run dev`
+* Lint verification: `npm run lint`
+* Production build: `npm run build`
+* Production output: `frontend/dist/`
+* Frontend foundation pull request: `#___`
