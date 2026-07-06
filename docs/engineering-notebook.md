@@ -174,3 +174,36 @@ React and TypeScript introduce build tooling and dependency-management overhead 
 * Production build: `npm run build`
 * Production output: `frontend/dist/`
 * Frontend foundation pull request: `#___`
+
+### Cloudflare Pages Frontend Deployment
+
+The React frontend is deployed through Cloudflare Pages as a public HTTPS site connected to the GitHub repository.
+
+Implementation:
+
+* The existing Vite React TypeScript frontend in `frontend/` is connected to a Cloudflare Pages project.
+* Cloudflare Pages builds the frontend from the GitHub repository.
+* The production branch is `main`.
+* The Cloudflare Pages project uses `frontend` as the root directory.
+* The build command is `npm run build`.
+* The build output directory is `dist`.
+* Cloudflare serves the production build through a generated `pages.dev` URL.
+* A custom domain is connected to the Pages deployment.
+
+Why it matters:
+
+This creates the project’s first real production deployment path. The frontend is no longer only a local development artifact; it can be built by a cloud platform, served publicly over HTTPS, connected to a real domain, and verified outside the developer’s machine. This supports a repeatable release path and gives reviewers a live version of the project to inspect.
+
+Tradeoffs / limitations:
+
+This deployment uses Cloudflare Pages as a managed frontend hosting platform. That is an appropriate production abstraction for a static React frontend, but it does not mean every production concern is solved. The backend is not deployed yet, production observability is not configured yet, and formal rollback practice will be introduced later. Cloudflare Pages also rebuilds the frontend from GitHub rather than serving as the course’s strongest example of build-once, promote-same-artifact deployment; that pattern will be emphasized later with backend container deployment.
+
+Evidence:
+
+* Production branch: `main`
+* Frontend root directory: `frontend`
+* Build command: `npm run build`
+* Build output directory: `dist`
+* Cloudflare Pages URL: `https://my-platform-9ev.pages.dev/`
+* Custom domain: `https://portfolio.yourdomain.dev`
+* Pull request: #___

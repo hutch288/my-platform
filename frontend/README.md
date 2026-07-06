@@ -68,3 +68,35 @@ The following generated or local-only files should not be committed:
 * `node_modules/`
 * `dist/`
 * local environment files such as `.env`
+
+## Deployment
+
+The frontend is deployed with Cloudflare Pages.
+
+Cloudflare Pages builds the React frontend from the GitHub repository and serves the production build output over HTTPS.
+
+Live URLs:
+
+* Custom domain: `https://portfolio.jonhuchins.dev`
+* Cloudflare Pages URL: `https://my-platform-9ev.pages.dev/`
+
+Cloudflare Pages configuration:
+
+* Production branch: `main`
+* Root directory: `frontend`
+* Framework preset: React / Vite
+* Build command: `npm run build`
+* Build output directory: `dist`
+
+Deployment verification:
+
+* The Cloudflare Pages deployment completed successfully.
+* The Cloudflare Pages URL loads over HTTPS.
+* The custom domain loads over HTTPS, or is documented as pending.
+* The deployed site shows the expected React application.
+
+Current limitations:
+
+* The frontend is deployed.
+* The backend is not deployed yet.
+* The production database connection is not configured yet.
