@@ -22,3 +22,8 @@ dist/
 # Operating-system files
 .DS_Store
 Thumbs.db
+
+
+
+dist-ssr/
+*.local
