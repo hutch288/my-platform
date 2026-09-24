@@ -7,7 +7,7 @@ function App() {
     <main>
       <h1>Jon Hutchins</h1>
 
-      <h2>Senior Capstone Production Platform Test</h2>
+      <h2>Senior Capstone Production Platform Page</h2>
 
       <p>
         This site will present my software projects, engineering decisions,
