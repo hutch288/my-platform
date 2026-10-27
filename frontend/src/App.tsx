@@ -1,7 +1,13 @@
+
 import './App.css'
+import ActiveLearningGame from './ActiveLearningGame'
 
 function App() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
 
+  if (path === '/active-learning-game') {
+    return <ActiveLearningGame />
+  }
 
   return (
     <main>
@@ -15,6 +21,10 @@ function App() {
       </p>
 
       <p>Initial frontend setup in progress.</p>
+
+      <p>
+        <a href="/active-learning-game">Active Learning Game</a>
+      </p>
     </main>
   )
 }
