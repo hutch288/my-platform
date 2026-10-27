@@ -304,9 +304,9 @@ export default function ActiveLearningGame() {
   return (
     <main className="alg">
       <div className="alg-shell">
-        <a className="alg-home" href="/">← Home</a>
+       {/* <a className="alg-home" href="/">← Home</a> */}
         <h1>Active Learning: Can You Find the Line?</h1>
-        <p className="alg-subtitle">You are the labeling oracle. The model chooses which point to ask about next. How few labels can it use?</p>
+        <p className="alg-subtitle">You are the labeling expert. The model chooses which point to ask about next. How few labels can it use?</p>
 
         <div className="alg-layout">
           <section className="alg-panel" aria-label="Classification playground">
