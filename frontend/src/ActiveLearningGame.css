@@ -1,0 +1,50 @@
+/* Scoped to the game so it doesn't redesign your home page. */
+#root:has(.alg) { max-width: none; width: 100%; margin: 0; padding: 0; text-align: left; }
+.alg { min-height: 100vh; box-sizing: border-box; background: #f4f6fa; color: #1d2940; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.alg * { box-sizing: border-box; }
+.alg-shell { max-width: 1120px; margin: 0 auto; padding: 20px; }
+.alg-home { display: inline-block; color: #54617a; font-size: .9rem; text-decoration: none; margin-bottom: 15px; }
+.alg-home:hover { text-decoration: underline; }
+.alg h1 { font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2; margin: 0 0 8px; letter-spacing: -.03em; }
+.alg h2 { font-size: 1.03rem; margin: 0 0 10px; color: #1d2940; }
+.alg p { line-height: 1.5; }
+.alg-subtitle { color: #536078; margin: 0 0 20px; }
+.alg-layout { display: grid; grid-template-columns: minmax(300px, 1.6fr) minmax(270px, 1fr); gap: 20px; align-items: start; }
+.alg-panel { background: white; border: 1px solid #e1e5ed; border-radius: 16px; box-shadow: 0 5px 24px #1d29400a; padding: 18px; }
+.alg canvas { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; border: 1px solid #e2e6ed; border-radius: 10px; background: white; }
+.alg-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; font-size: .81rem; color: #4c5971; }
+.alg-key { display: inline-block; width: 19px; height: 4px; vertical-align: middle; margin-right: 5px; border-radius: 3px; }
+.alg-truth { background: repeating-linear-gradient(90deg, #858c9c 0 5px, transparent 5px 8px); }
+.alg-model { background: #8252c7; }
+.alg-band { height: 11px; background: #e2d4f9; }
+.alg-query { background: #fbbf24; }
+.alg-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+.alg-metric { background: #f6f7fa; border-radius: 10px; padding: 12px; }
+.alg-number { font-size: 1.6rem; font-weight: 750; line-height: 1.2; }
+.alg-name { font-size: .75rem; color: #627089; margin-top: 4px; }
+.alg-instructions { font-size: .94rem; color: #44516c; margin: 0 0 13px; }
+.alg-red-text { color: #c83446; }
+.alg-blue-text { color: #2562cc; }
+.alg-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.alg button { border: 1px solid #d1d7e2; border-radius: 10px; padding: 13px 11px; background: white; font: inherit; cursor: pointer; font-weight: 650; transition: filter .1s; }
+.alg button:hover:not(:disabled) { filter: brightness(.96); }
+.alg button:focus-visible { outline: 3px solid #e1b34a; outline-offset: 3px; }
+.alg button:disabled { opacity: .48; cursor: not-allowed; }
+.alg .alg-red-btn { background: #d84453; border-color: #d84453; color: white; }
+.alg .alg-blue-btn { background: #326cda; border-color: #326cda; color: white; }
+.alg-status { font-size: .9rem; min-height: 70px; margin: 12px 0 0; border-radius: 10px; background: #f4f3fa; padding: 10px 12px; color: #37415b; }
+.alg-setting { padding-top: 12px; border-top: 1px solid #e7eaf0; margin-top: 15px; }
+.alg-setting > label { display: block; font-size: .85rem; font-weight: 650; color: #425069; margin-bottom: 7px; }
+.alg select { display: block; width: 100%; padding: 10px; background: white; border: 1px solid #cfd6e0; border-radius: 9px; color: #1d2940; font: inherit; }
+.alg .alg-reset { width: 100%; margin-top: 10px; background: #eff2f8; color: #26334a; }
+.alg-toggle { display: flex; gap: 9px; align-items: center; margin-top: 14px; font-size: .85rem; color: #425069; }
+.alg-toggle input { width: 16px; height: 16px; }
+.alg-note { font-size: .85rem; color: #526079; line-height: 1.55; }
+.alg-note strong { color: #24324e; }
+.alg-bottom { margin-top: 20px; padding: 16px 20px; background: white; border: 1px solid #e1e5ed; border-radius: 14px; }
+.alg-bottom p { font-size: .92rem; color: #4c5971; margin: 5px 0 10px; }
+@media (max-width: 750px) {
+  .alg-layout { grid-template-columns: 1fr; }
+  .alg-shell { padding: 12px; }
+  .alg-panel { padding: 12px; }
+}
